@@ -169,15 +169,6 @@ a:hover { text-decoration-thickness: 2px; }
 video.panel__img { filter: brightness(1.05) contrast(1.1); }
 .panel__verb { position: absolute; inset: 0; display: grid; place-items: center; z-index: 1; pointer-events: none; }
 .panel__verb h2 { font-size: var(--step-display); font-weight: 500; letter-spacing: -0.045em; line-height: 0.85; color: var(--ink); }
-.panel__pause {
-  position: absolute; right: var(--m); bottom: var(--m); z-index: 2;
-  min-height: 44px; padding: 0 18px; border: 0; border-radius: 0;
-  background: var(--scrim); color: var(--ink);
-  font: inherit; font-size: var(--step-small); cursor: pointer;
-  transition: transform 180ms var(--ease);
-}
-.panel__pause:hover { background: var(--bg); }
-.panel__pause:active { transform: scale(0.97); }
 .panel__say {
   position: absolute; left: var(--m); bottom: var(--m); z-index: 2;
   max-width: 36ch; padding: 16px 20px; background: var(--scrim);
@@ -313,8 +304,6 @@ video.panel__img { filter: brightness(1.05) contrast(1.1); }
   .menu__note td { font-size: var(--step-small); grid-column: 1 / -1; }
 
   .panel__say { left: var(--m); right: var(--m); bottom: var(--m); }
-  .panel:has(.panel__pause:not([hidden])) .panel__say { bottom: calc(var(--m) + 56px); }
-  .panel__pause { left: var(--m); right: auto; }
 
   .contact { min-height: 0; padding-top: 72px; gap: 40px; }
   .contact__top { grid-template-columns: 1fr; }

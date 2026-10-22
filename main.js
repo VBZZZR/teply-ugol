@@ -139,29 +139,34 @@ function fit() {
 fit();
 document.fonts?.ready.then(fit);
 
-// the loop plays only on screen, never under reduced motion, and the visitor can stop it
+// the snow loop starts by itself; where the browser refuses to play video
+// (iPhone in Low Power Mode), the same scene runs as an animated image instead
 const video = document.querySelector('.panel video');
-const pauseButton = document.querySelector('.panel__pause');
 if (video) {
-  const still = matchMedia('(prefers-reduced-motion: reduce)');
-  let visible = false;
-  let stopped = still.matches;
-  const label = () => {
-    if (!pauseButton) return;
-    pauseButton.setAttribute('aria-pressed', String(stopped));
-    pauseButton.textContent = stopped ? 'Пустить снег' : 'Остановить снег';
+  let fallen = false;
+  const fallBack = () => {
+    if (fallen) return;
+    fallen = true;
+    const img = new Image();
+    img.className = video.className;
+    img.src = 'assets/snow-under-led-street-light-in-tuntorp-loop.webp';
+    img.alt = '';
+    img.width = 640;
+    img.height = 360;
+    img.decoding = 'async';
+    video.replaceWith(img);
   };
-  const sync = () => {
-    // a browser that blocks autoplay (low power mode, data saver) leaves the poster and offers the button
-    if (visible && !stopped) video.play().catch(() => { stopped = true; label(); });
-    else video.pause();
-    label();
+  const start = () => {
+    if (fallen) return;
+    video.muted = true;
+    const attempt = video.play();
+    if (attempt) attempt.catch((err) => { if (err?.name === 'NotAllowedError') fallBack(); });
   };
+  video.addEventListener('error', fallBack);
+  video.querySelector('source:last-of-type')?.addEventListener('error', fallBack);
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; sync(); }).observe(video);
+    new IntersectionObserver(([e]) => { if (fallen) return; e.isIntersecting ? start() : video.pause(); }).observe(video);
+  } else {
+    start();
   }
-  still.addEventListener('change', (e) => { stopped = e.matches; sync(); });
-  pauseButton?.addEventListener('click', () => { stopped = !stopped; sync(); });
-  if (pauseButton) pauseButton.hidden = false;
-  sync();
 }
