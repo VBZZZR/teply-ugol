@@ -146,13 +146,16 @@ if (video) {
   const still = matchMedia('(prefers-reduced-motion: reduce)');
   let visible = false;
   let stopped = still.matches;
+  const label = () => {
+    if (!pauseButton) return;
+    pauseButton.setAttribute('aria-pressed', String(stopped));
+    pauseButton.textContent = stopped ? 'Пустить снег' : 'Остановить снег';
+  };
   const sync = () => {
-    if (visible && !stopped) video.play().catch(() => {});
+    // a browser that blocks autoplay (low power mode, data saver) leaves the poster and offers the button
+    if (visible && !stopped) video.play().catch(() => { stopped = true; label(); });
     else video.pause();
-    if (pauseButton) {
-      pauseButton.setAttribute('aria-pressed', String(stopped));
-      pauseButton.textContent = stopped ? 'Пустить снег' : 'Остановить снег';
-    }
+    label();
   };
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([e]) => { visible = e.isIntersecting; sync(); }).observe(video);

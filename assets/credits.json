@@ -206,5 +206,31 @@
     "credit": "\"Plan imperatorskago stoličnago goroda Sankt Peterburga, sočinennoj v 1737 godu. Plan der…\", public domain, via Wikimedia Commons",
     "notes": [],
     "saved": "2026-10-21T07:58:22.138Z"
+  },
+  {
+    "file": "assets/snow-under-led-street-light-in-tuntorp.mp4",
+    "media": "video",
+    "poster": "assets/snow-under-led-street-light-in-tuntorp-poster.jpg",
+    "ref": "commons:181462884",
+    "title": "Snow under LED street light in Tuntorp, Brastad",
+    "creator": "W.carter",
+    "creatorUrl": null,
+    "date": "2026-01-08",
+    "license": "CC BY 4.0",
+    "licenseCode": "by",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "creditRequired": true,
+    "page": "https://commons.wikimedia.org/wiki/File:Snow_under_LED_street_light_in_Tuntorp,_Brastad.webm",
+    "via": "Wikimedia Commons",
+    "video": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/Snow_under_LED_street_light_in_Tuntorp%2C_Brastad.webm/Snow_under_LED_street_light_in_Tuntorp%2C_Brastad.webm.480p.vp9.webm",
+    "width": 854,
+    "height": 480,
+    "duration": 34.8,
+    "bytes": 3658698,
+    "credit": "\"Snow under LED street light in Tuntorp, Brastad\" by W.carter, CC BY 4.0, via Wikimedia Commons",
+    "notes": [
+      "H.264 MP4 transcode of the same clip, for Safari"
+    ],
+    "saved": "2026-10-21T07:56:21.322Z"
   }
 ]
