@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тёплый угол, пекарня на Васильевском острове</title>
+<meta name="description" content="Районная пекарня на углу 8-й линии и Среднего проспекта. Печём с шести утра: хлеб на закваске, круассаны, кофе с собой. Каждый день с 7:00 до 21:00.">
+<meta name="theme-color" content="#0c0e12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="image" href="assets/lantern-kapella.jpg">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="bar">
+  <nav class="bar__nav" aria-label="Разделы">
+    <a class="bar__link bar__link--wide" href="#menu">Меню и цены</a>
+    <a class="bar__link bar__link--wide" href="#process">Как печём</a>
+    <a class="bar__link bar__link--wide" href="#address">Адрес и часы</a>
+    <a class="bar__link bar__link--phone" href="#menu">Меню</a>
+    <a class="button" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%208-%D1%8F%20%D0%BB%D0%B8%D0%BD%D0%B8%D1%8F%20%D0%92.%D0%9E.%2C%2035" target="_blank" rel="noopener">Как дойти</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="title">
+    <figure class="hero__photo">
+      <img src="assets/lantern-kapella.jpg" width="1214" height="1618" alt="Петербургский фонарь горит на заснеженном фасаде зимним вечером" fetchpriority="high">
+    </figure>
+    <h1 class="hero__title" id="title" data-load="1" translate="no"><span class="hero__word">тёплый угол</span></h1>
+    <div class="hero__text">
+      <p class="hero__lede" data-load="2">Пекарня на углу 8-й линии и Среднего проспекта. Печём с шести утра: хлеб на закваске, круассаны, кофе с собой.</p>
+      <p class="live" id="now" data-load="3">
+        <span class="live__js" aria-live="off" aria-atomic="true" hidden></span>
+        <span class="live__static">Печь затапливаем в 06:00. Двери открываем в 07:00 с первым пшеничным. Круассаны выходят в 07:30, ржаной в 08:00.</span>
+      </p>
+      <a class="hero__more" href="#menu" data-load="4">Всё меню с ценами и временем выпечки</a>
+    </div>
+  </section>
+
+  <section class="intro" aria-labelledby="why">
+    <p class="stairs" data-reveal>
+      <span class="stairs__line">Пока остров спит,</span>
+      <span class="stairs__line">на углу уже горит печь:</span>
+      <span class="stairs__line">в семь выходит хлеб,</span>
+      <span class="stairs__line">в половине восьмого круассаны,</span>
+      <span class="stairs__line">к восьми очередь за кофе с собой.</span>
+    </p>
+    <div class="intro__photos">
+      <figure data-reveal style="--d:90ms">
+        <img src="assets/artisan-rye-bread-1-kanniston-leipomo-2013.jpg" width="1920" height="1280" alt="Ржаные караваи с надрезами, присыпанные мукой, на противне" loading="lazy" decoding="async">
+      </figure>
+      <figure data-reveal style="--d:180ms">
+        <img src="assets/croissants-and-sweets-placed-on-a-wooden.jpg" width="1920" height="2876" alt="Круассаны на тарелке на тёмном деревянном столе" loading="lazy" decoding="async">
+      </figure>
+    </div>
+    <div class="intro__note" data-reveal style="--d:120ms">
+      <h2 class="intro__heading" id="why">Почему «Тёплый угол»</h2>
+      <p>С октября по март на Васильевском светает после девяти. Наше окно на углу горит с шести, и к нему идут первые прохожие с линий.</p>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-title">
+    <div class="menu__head">
+      <h2 class="menu__title" id="menu-title" data-reveal>Меню и цены</h2>
+      <p class="menu__intro" data-reveal style="--d:80ms">Время справа показывает, когда партия выходит из печи. То, что уже на полке, горит светлым; следующая партия отмечена.</p>
+    </div>
+
+    <div class="menu__group">
+      <h3 class="menu__part">Хлеб на закваске</h3>
+      <table class="menu__table" role="table">
+        <colgroup><col class="c-name"><col class="c-what"><col class="c-time"><col class="c-price"></colgroup>
+        <thead class="sr-only" role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Что</th><th scope="col" role="columnheader">Какой</th><th scope="col" role="columnheader">Из печи</th><th scope="col" role="columnheader">Цена</th></tr></thead>
+        <tbody role="rowgroup">
+          <tr role="row" data-out="07:00" data-name="пшеничный на закваске"><th scope="row" role="rowheader">Пшеничный на закваске</th><td role="cell">750&nbsp;г, тесто зреет сутки в холоде</td><td role="cell" class="t">07:00</td><td role="cell" class="p">320&nbsp;₽</td></tr>
+          <tr role="row" data-out="07:00,17:00" data-name="багеты"><th scope="row" role="rowheader">Багет на закваске</th><td role="cell">280&nbsp;г, хрустящая корка</td><td role="cell" class="t">07:00 и 17:00</td><td role="cell" class="p">160&nbsp;₽</td></tr>
+          <tr role="row" data-out="08:00" data-name="ржаной заварной"><th scope="row" role="rowheader">Ржаной заварной</th><td role="cell">800&nbsp;г, солод и кориандр</td><td role="cell" class="t">08:00</td><td role="cell" class="p">290&nbsp;₽</td></tr>
+          <tr role="row" data-out="08:00" data-name="цельнозерновой"><th scope="row" role="rowheader">Цельнозерновой</th><td role="cell">700&nbsp;г, лён и подсолнечник</td><td role="cell" class="t">08:00</td><td role="cell" class="p">340&nbsp;₽</td></tr>
+          <tr role="row" data-out="11:00" data-name="фокачча"><th scope="row" role="rowheader">Фокачча с розмарином</th><td role="cell">кусок 200&nbsp;г, оливковое масло</td><td role="cell" class="t">11:00</td><td role="cell" class="p">210&nbsp;₽</td></tr>
+          <tr role="row" class="menu__note"><td role="cell" colspan="4">Половинку любого хлеба отрежем и продадим за полцены</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="menu__group">
+      <h3 class="menu__part">Круассаны и выпечка</h3>
+      <table class="menu__table" role="table">
+        <colgroup><col class="c-name"><col class="c-what"><col class="c-time"><col class="c-price"></colgroup>
+        <thead class="sr-only" role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Что</th><th scope="col" role="columnheader">Какой</th><th scope="col" role="columnheader">Из печи</th><th scope="col" role="columnheader">Цена</th></tr></thead>
+        <tbody role="rowgroup">
+          <tr role="row" data-out="07:30,15:00" data-name="круассаны"><th scope="row" role="rowheader">Круассан</th><td role="cell">на сливочном масле 82%</td><td role="cell" class="t">07:30 и 15:00</td><td role="cell" class="p">190&nbsp;₽</td></tr>
+          <tr role="row" data-out="07:30" data-name="пен-о-шоколя"><th scope="row" role="rowheader">Пен-о-шоколя</th><td role="cell">два бруска тёмного шоколада</td><td role="cell" class="t">07:30</td><td role="cell" class="p">230&nbsp;₽</td></tr>
+          <tr role="row" data-out="08:30" data-name="миндальные круассаны"><th scope="row" role="rowheader">Круассан с миндалём</th><td role="cell">вчерашний, пропитан и запечён</td><td role="cell" class="t">08:30</td><td role="cell" class="p">260&nbsp;₽</td></tr>
+          <tr role="row" data-out="09:00" data-name="улитки с кардамоном"><th scope="row" role="rowheader">Улитка с кардамоном</th><td role="cell">корица, кардамон, сахарный сироп</td><td role="cell" class="t">09:00</td><td role="cell" class="p">210&nbsp;₽</td></tr>
+          <tr role="row" data-out="09:00" data-name="слойки с антоновкой"><th scope="row" role="rowheader">Слойка с антоновкой</th><td role="cell">печёное яблоко и брусника</td><td role="cell" class="t">09:00</td><td role="cell" class="p">220&nbsp;₽</td></tr>
+          <tr role="row" class="menu__note"><td role="cell" colspan="4">С 12:00 до 15:00 печь отдыхает: всё на полках, кофе варим</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="menu__group">
+      <h3 class="menu__part">Кофе с собой</h3>
+      <table class="menu__table" role="table">
+        <colgroup><col class="c-name"><col class="c-what"><col class="c-time"><col class="c-price"></colgroup>
+        <thead class="sr-only" role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Что</th><th scope="col" role="columnheader">Объём</th><th scope="col" role="columnheader">Когда</th><th scope="col" role="columnheader">Цена</th></tr></thead>
+        <tbody role="rowgroup">
+          <tr role="row"><th scope="row" role="rowheader">Эспрессо</th><td role="cell">30&nbsp;мл</td><td role="cell" class="t">весь день</td><td role="cell" class="p">140&nbsp;₽</td></tr>
+          <tr role="row"><th scope="row" role="rowheader">Американо</th><td role="cell">250&nbsp;мл</td><td role="cell" class="t">весь день</td><td role="cell" class="p">180&nbsp;₽</td></tr>
+          <tr role="row"><th scope="row" role="rowheader">Капучино</th><td role="cell">250 или 350&nbsp;мл</td><td role="cell" class="t">весь день</td><td role="cell" class="p">220 / 260&nbsp;₽</td></tr>
+          <tr role="row"><th scope="row" role="rowheader">Флэт уайт</th><td role="cell">200&nbsp;мл, двойной эспрессо</td><td role="cell" class="t">весь день</td><td role="cell" class="p">240&nbsp;₽</td></tr>
+          <tr role="row"><th scope="row" role="rowheader">Раф с кардамоном</th><td role="cell">300&nbsp;мл</td><td role="cell" class="t">весь день</td><td role="cell" class="p">290&nbsp;₽</td></tr>
+          <tr role="row"><th scope="row" role="rowheader">Какао</th><td role="cell">300&nbsp;мл, на молоке</td><td role="cell" class="t">весь день</td><td role="cell" class="p">220&nbsp;₽</td></tr>
+          <tr role="row" class="menu__note"><td role="cell" colspan="4">Со своей кружкой на 20&nbsp;₽ дешевле</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="process" id="process" aria-label="Как мы печём">
+    <article class="panel">
+      <img class="panel__img" src="assets/100-rye-bread-dough-5753173666.jpg" width="1920" height="1280" alt="Ржаное тесто на закваске поднялось в стеклянной миске" loading="lazy" decoding="async">
+      <div class="panel__verb"><h2>Кормим</h2></div>
+      <p class="panel__say">В десять вечера кормим закваску ржаной мукой и водой. До утра она набирает силу, дрожжей мы не добавляем.</p>
+    </article>
+    <article class="panel">
+      <img class="panel__img" src="assets/st-petersburg-by-darafsh-16-47-51.jpg" width="1920" height="2560" alt="Петербургский двор-колодец ночью, в окнах редкий свет" loading="lazy" decoding="async">
+      <div class="panel__verb"><h2>Месим</h2></div>
+      <p class="panel__say">В три ночи, когда во дворах темно, замешиваем тесто: мука, вода, соль и закваска. Больше ничего.</p>
+    </article>
+    <article class="panel">
+      <video class="panel__img" muted loop playsinline preload="metadata" poster="assets/snow-under-led-street-light-in-tuntorp-poster.jpg" width="854" height="480" aria-hidden="true"><source src="assets/snow-under-led-street-light-in-tuntorp.webm" type="video/webm"></video>
+      <div class="panel__verb"><h2>Ждём</h2></div>
+      <p class="panel__say">Тесто растёт 3&nbsp;часа. За окном снег под фонарём и первый трамвай по Среднему.</p>
+      <button class="panel__pause" type="button" aria-pressed="false" hidden>Остановить снег</button>
+    </article>
+    <article class="panel">
+      <img class="panel__img" src="assets/6311-sourdough-bread-in-dutch-oven.jpg" width="1920" height="1280" alt="Круглый хлеб на закваске с узором из муки в чугунной форме" loading="lazy" decoding="async">
+      <div class="panel__verb"><h2>Печём</h2></div>
+      <p class="panel__say">В шесть затапливаем печь. Первый хлеб выходит в семь, круассаны в половине восьмого.</p>
+    </article>
+    <article class="panel">
+      <img class="panel__img" src="assets/latte-and-dark-coffee.jpg" width="1920" height="1200" alt="Капучино и чёрный кофе в белых чашках на деревянном столе" loading="lazy" decoding="async">
+      <div class="panel__verb"><h2>Наливаем</h2></div>
+      <p class="panel__say">Кофе варим с семи до девяти вечера, в стакан с крышкой. Со своей кружкой на 20&nbsp;₽ дешевле.</p>
+    </article>
+  </section>
+
+  <section class="contact" id="address" aria-labelledby="address-title">
+    <div class="contact__top">
+      <div class="contact__say">
+        <h2 class="contact__title" id="address-title" data-reveal>Адрес и часы</h2>
+        <p class="contact__lede" data-reveal style="--d:80ms">Угловой дом на 8-й линии у Среднего проспекта, вход с линии. От метро «Василеостровская» 6&nbsp;минут пешком.</p>
+        <dl class="hours" data-reveal style="--d:160ms">
+          <div><dt>Каждый день</dt><dd>07:00–21:00</dd></div>
+          <div><dt>Печь горит</dt><dd>с 06:00</dd></div>
+          <div><dt>Первый хлеб</dt><dd>07:00</dd></div>
+          <div><dt>Вечерние багеты</dt><dd>17:00</dd></div>
+        </dl>
+      </div>
+      <figure class="contact__map" data-reveal style="--d:120ms">
+        <img src="assets/plan-1737-vo.jpg" width="1800" height="1500" alt="Васильевский остров на плане Петербурга 1737 года: линии уже нарезаны, у стрелки — первые кварталы" loading="lazy" decoding="async">
+        <figcaption>Васильевский остров на плане 1737 года. Линии нарезали уже тогда, наш угол в середине острова.</figcaption>
+      </figure>
+    </div>
+    <a class="contact__address" translate="no" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%208-%D1%8F%20%D0%BB%D0%B8%D0%BD%D0%B8%D1%8F%20%D0%92.%D0%9E.%2C%2035" target="_blank" rel="noopener" aria-label="8-я линия В.&nbsp;О., 35: открыть на карте">
+      <svg class="fit" viewBox="0 0 1000 150" aria-hidden="true" preserveAspectRatio="xMinYMax meet"><text x="0" y="120">8-я линия, 35</text></svg>
+    </a>
+    <div class="contact__foot">
+      <p><a href="tel:+78120000000">+7&nbsp;812&nbsp;000-00-00</a><br>Санкт-Петербург, Васильевский остров</p>
+      <p>Каравай к субботе или 30 круассанов на утро:<br><a href="mailto:hello@teplyugol.ru?subject=%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%B2%20%C2%AB%D0%A2%D1%91%D0%BF%D0%BB%D1%8B%D0%B9%20%D1%83%D0%B3%D0%BE%D0%BB%C2%BB&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20%0A%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B7%D0%B0%D0%B1%D0%B5%D1%80%D1%83%3A%20">hello@teplyugol.ru</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__cols">
+    <div><p class="footer__lead">Адрес</p><p>8-я линия В.&nbsp;О., 35<br>угол Среднего проспекта</p></div>
+    <div><p class="footer__lead">Часы</p><p>Каждый день 07:00–21:00<br>Печь горит с 06:00</p></div>
+    <div><p class="footer__lead">Разделы</p><p><a href="#menu">Меню и цены</a><br><a href="#process">Как печём</a><br><a href="#address">Адрес и часы</a></p></div>
+    <div><p class="footer__lead">Связь</p><p><a href="tel:+78120000000">+7&nbsp;812&nbsp;000-00-00</a><br><a href="mailto:hello@teplyugol.ru">hello@teplyugol.ru</a><br><a href="https://t.me/teplyugol">Телеграм</a></p></div>
+  </div>
+  <div class="footer__mark" aria-hidden="true" translate="no">
+    <svg class="fit" viewBox="0 0 1000 150" preserveAspectRatio="xMinYMax meet"><text x="0" y="120">тёплый угол</text></svg>
+  </div>
+  <p class="credits">© Тёплый угол, 2026. Фото и видео: <a href="https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D0%B0%D1%80%D1%8C_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5_%D0%9A%D0%B0%D0%BF%D0%B5%D0%BB%D0%BB%D1%8B_-_panoramio.jpg">«Фонарь во дворе Капеллы»</a>, Andrew Zorin, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=120506975">«Artisan rye bread (1), Kanniston Leipomo»</a>, Jarkko Laine, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Croissants_and_sweets_placed_on_a_wooden_table_with_an_open_book_and_a_biscuit_cutter_on_display.jpg">«Croissants and sweets placed on a wooden table»</a>, Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=35716683">«100% Rye Bread Dough»</a>, Veganbaking.net, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:St_Petersburg_by_Darafsh_16_47_51_698000.jpeg">«St Petersburg by Darafsh»</a>, Darafsh, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Snow_under_LED_street_light_in_Tuntorp,_Brastad.webm">«Snow under LED street light in Tuntorp, Brastad»</a>, W.carter, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:6311_sourdough_bread_in_dutch_oven.jpg">«6311 sourdough bread in dutch oven»</a>, Virtual-Pano, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Latte_and_dark_coffee.jpg">«Latte and dark coffee»</a>, Bex Walton, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sankt_Petersburg_BV039861937.jpg">план Санкт-Петербурга 1737 года</a>, общественное достояние. Все — через Wikimedia Commons.</p>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
